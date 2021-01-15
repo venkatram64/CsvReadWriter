@@ -49,6 +49,8 @@ public class ProductSubscriber {
                             + rec.value().getName() +", " + rec.value().getQuantity() + ", " + rec.value().getBrandId());
                     System.out.println(" value, key, offset, partition and topic " + rec.value() +", " + rec.key() + ", "
                             + rec.offset() + ", " + rec.partition() + ", " + rec.topic() );
+
+                    //sending emails to consumers
                 }
             }
         }catch(Exception ex){

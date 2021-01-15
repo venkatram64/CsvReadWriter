@@ -22,7 +22,7 @@ public class ProductPublisher {
         this.config = config;
     }
 */
-    //
+    @Autowired  //constructor injection
     public ProductPublisher(MyKafkaConfiguration config){
         this.config = config;
         Properties props = new Properties();
