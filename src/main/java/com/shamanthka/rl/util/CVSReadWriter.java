@@ -93,8 +93,8 @@ public class CVSReadWriter {
         }
     }
 
-    public void sendEmails(){
-        System.out.println("I am printing...");
+    public void readingFromTopic(){
+        System.out.println("Reading from topic after that send to email...");
         subscriber.consume();
     }
 

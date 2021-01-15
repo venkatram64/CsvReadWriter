@@ -45,7 +45,7 @@ public class ProductSubscriber {
             while(true){
                 ConsumerRecords<String, ProductVO> records = consumer.poll(100);
                 for(ConsumerRecord<String, ProductVO> rec: records){
-                    System.out.println(" product info " + rec.value().getId() +", " + rec.value().getModelNumber() + ", "
+                    System.out.println(" reading from topic product info " + rec.value().getId() +", " + rec.value().getModelNumber() + ", "
                             + rec.value().getName() +", " + rec.value().getQuantity() + ", " + rec.value().getBrandId());
                     System.out.println(" value, key, offset, partition and topic " + rec.value() +", " + rec.key() + ", "
                             + rec.offset() + ", " + rec.partition() + ", " + rec.topic() );

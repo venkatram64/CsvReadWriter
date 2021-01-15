@@ -47,7 +47,7 @@ public class ProductPublisher {
                             if(e != null){
                                 e.printStackTrace();
                             }
-                            System.out.println("Sending completed..." + product.getId());
+                            System.out.println("publishing to topic completed..." + product.getId());
                         }
                     });
             Thread.sleep(100);

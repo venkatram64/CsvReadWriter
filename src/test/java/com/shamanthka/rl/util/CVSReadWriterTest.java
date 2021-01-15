@@ -15,7 +15,7 @@ class CVSReadWriterTest {
     public void readWriteTest(){
         readWriter.readAndWrite();
         //printing the products from kafka topic
-        readWriter.sendEmails();
+        readWriter.readingFromTopic();
     }
 
 }
