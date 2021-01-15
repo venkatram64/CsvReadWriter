@@ -18,7 +18,7 @@ public class ProductDeserializer implements Deserializer<ProductVO> {
     public ProductVO deserialize(String s, byte[] bytes) {
         try {
             if (bytes == null) {
-                System.out.println("Null recieved at deserialize ");
+                System.out.println("Null received at deserialize ");
                 return null;
             }
             ObjectMapper mapper = new ObjectMapper();

@@ -20,7 +20,7 @@ public class ProductSubscriber {
 
     private MyKafkaConfiguration config;
 
-    @Autowired
+    @Autowired //constructor injection
     public ProductSubscriber(MyKafkaConfiguration config){
         this.config = config;
         Properties props = new Properties();

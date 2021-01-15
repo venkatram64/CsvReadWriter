@@ -21,13 +21,13 @@ public class CVSReadWriter {
     @Autowired
     private ItemService itemService;
 
-    //@Autowired
+    @Autowired
     private ProductPublisher publisher;
 
-    //@Autowired
+    @Autowired
     private ProductSubscriber subscriber;
 
-    @Autowired //setter injection
+    /*@Autowired //setter injection
     public void setSubscriber(ProductSubscriber subscriber) {
         this.subscriber = subscriber;
     }
@@ -35,7 +35,7 @@ public class CVSReadWriter {
     @Autowired //setter injection
     public void setPublisher(ProductPublisher publisher){
         this.publisher = publisher;
-    }
+    }*/
 
     public void readAndWrite(){
         try {
