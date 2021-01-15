@@ -27,12 +27,12 @@ public class CVSReadWriter {
     //@Autowired
     private ProductSubscriber subscriber;
 
-    @Autowired
+    @Autowired //setter injection
     public void setSubscriber(ProductSubscriber subscriber) {
         this.subscriber = subscriber;
     }
 
-    @Autowired
+    @Autowired //setter injection
     public void setPublisher(ProductPublisher publisher){
         this.publisher = publisher;
     }
