@@ -1,4 +1,4 @@
-package com.shamanthka.rl.model;
+package com.shamanthka.rl.pm;
 
 public class MyPoyInheritance {
 
