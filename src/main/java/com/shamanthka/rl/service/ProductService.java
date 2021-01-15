@@ -10,12 +10,13 @@ import java.util.List;
 @Service
 public class ProductService {
 
-
+    @Autowired
     private ProductRepository productRepository;
 
+    /*@Autowired//constructor injection
     public ProductService(ProductRepository productRepository){
         this.productRepository = productRepository;
-    }
+    }*/
 
     public Product save(Product prod){
         Product p = productRepository.saveAndFlush(prod);
