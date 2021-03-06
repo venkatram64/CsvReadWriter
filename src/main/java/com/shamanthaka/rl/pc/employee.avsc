@@ -1,0 +1,15 @@
+{
+    "namespace": "employee.avro",
+    "type": "record",
+    "name": "Employee",
+    "fields":[
+        {
+            "name":"name",
+            "type": "string"
+        },
+        {
+            "name": "empNo",
+            "type": "int"
+        }
+    ]
+}
