@@ -61,4 +61,10 @@ public class MessageCount {
         kafkaConsumer.close();
         adminClient.close();
     }
+
+    public static void main(String[] args) throws Exception {
+        MyKafkaConfiguration config = new MyKafkaConfiguration();
+        MessageCount messageCount = new MessageCount(config);
+        messageCount.processMessageCount();
+    }
 }
