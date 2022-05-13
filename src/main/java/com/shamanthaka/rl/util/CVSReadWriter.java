@@ -75,7 +75,7 @@ public class CVSReadWriter {
                 item.setPrice(up);
                 item.setProduct(p);
                 itemService.save(item);
-//above code is saved data into tables
+               //above code is saved data into tables
 
                 ProductVO productVO = new ProductVO();
                 productVO.setId(p.getId());
