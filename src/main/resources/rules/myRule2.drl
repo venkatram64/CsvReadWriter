@@ -1,0 +1,26 @@
+package rules
+import com.shamanthaka.rl.drools.Product2
+
+rule "Offer for Diamond"
+    when
+        prod: Product2(type=="diamond")
+    then
+        prod.setDiscount(8);
+    end
+rule "Offer for Gold"
+salience 2
+    when
+        prod: Product2(type=="gold")
+    then
+        prod.setDiscount(prod.getDiscount() + 4);
+        System.out.println("Offer for Gold");
+    end
+rule "Offer for Gold on Festival"
+salience 3
+    when
+        prod: Product2(type == "gold") && Product2(event == "sale")
+    then
+        prod.setDiscount(prod.getDiscount() + 5);
+        System.out.println("Offer for Gold on Festival");
+    end
+

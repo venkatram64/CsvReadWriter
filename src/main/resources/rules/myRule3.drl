@@ -1,0 +1,36 @@
+package rules
+import com.shamanthaka.rl.drools.Product3
+
+rule "Offer for Diamond"
+    when
+        prod: Product3(type == "diamond")
+    then
+        prod.setDiscount(8);
+    end
+rule "Offer for Gold"
+salience 2
+    when
+        prod: Product3(type == "gold")
+    then
+        prod.setDiscount(prod.getDiscount() + 4);
+        System.out.println("Offer for Gold");
+    end
+rule "Offer for Gold on Festival"
+salience 3
+    when
+        prod: Product3(type == "gold") && Product3(event == "sale")
+    then
+        prod.setDiscount(prod.getDiscount() + 5);
+        System.out.println("Offer for Gold on Festival");
+    end
+rule "if customer is platinum"
+salience 1
+no-loop true
+    when
+        prod: Product3(buyer == "platinum")
+    then
+        System.out.println("Platinum customer discount...");
+        update(prod);
+    end
+
+

@@ -1,0 +1,15 @@
+package rules
+import com.shamanthaka.rl.drools.Product
+
+rule "Offer for Diamond"
+    when
+        prod: Product(type=="diamond")
+    then
+        prod.setDiscount(8);
+    end
+rule "Offer for Gold"
+    when
+        prod: Product(type=="gold")
+    then
+        prod.setDiscount(11);
+    end

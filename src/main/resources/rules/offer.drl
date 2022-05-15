@@ -1,0 +1,21 @@
+package rules
+import com.shamanthaka.rl.model.Order
+
+rule "Offer for SBI"
+    when
+        order: Order(cardType == "SBI" && price > 5000)
+    then
+        order.setDiscount(5);
+    end
+rule "Offer for ICICI"
+    when
+        order: Order(cardType == "ICICI" && price > 5000)
+    then
+        order.setDiscount(6);
+    end
+rule "Offer for HDFC"
+    when
+        order: Order(cardType == "HDFC" && price > 5000)
+    then
+        order.setDiscount(8);
+    end
